@@ -1,4 +1,4 @@
-//
+//  NÃO EDITAR
 //  ContentView.swift
 //  ProjectoFinal_PIII_PCIII
 //
@@ -9,8 +9,16 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        TabView{
+            StatsView().tabItem {
+                Image(systemName: "figure.walk")
+                Text("Stats")
+            }
+            MapView().tabItem {
+                Image(systemName: "map")
+                Text("Map")
+            }.edgesIgnoringSafeArea(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/)
+        }
     }
 }
 
